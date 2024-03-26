@@ -1,0 +1,190 @@
+/*reset*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: black;
+  color: aliceblue;
+}
+/* app*/
+.app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.app h1{
+  font-size: 40px;
+  text-shadow: 5px 5px 10px red,
+               -5px -5px 10px red,
+               5px -5px 10px red,
+               -5px 5px 10px red;
+}
+.app p{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 550px;
+  text-align: center;
+}
+.author{
+  font-size: 18px !important;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+  text-align: end !important;
+}
+.text{
+  background-color: rgb(255, 223, 233);
+  color: black;
+  padding: 10px 30px;
+  max-width: 450px;
+  min-width: 450px;
+  max-height: 110px;
+
+  position: relative;
+  top: 80px;
+  z-index: 1;
+}
+
+.animationText{
+  animation-name: animationText;
+  animation-duration: 5s;
+}
+
+.containerCoockie{
+  display: flex;
+  flex-direction:row;
+
+}
+
+.left,
+.rigth {
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.left{
+  background-image: url("../public/assets/cookie-left.png");
+}
+.animationLeft{
+  animation-name: animationCookieL;
+  animation-duration: 5s;
+}
+.rigth{
+  background-image: url("../public/assets/cookie-rigth.png");
+}
+.animationRight{
+  animation-name: animationCookieR;
+  animation-duration: 5s;
+}
+
+.app button{
+  font-size: 18px;
+  background-color: transparent;
+  color: white;
+  font-family:fantasy;
+  text-shadow: 2px 2px black,
+               -2px -2px black,
+               -2px 2px black,
+               2px -2px black;
+  border: 0;
+  box-shadow:   5px 5px 10px rgb(240, 93, 93);
+  padding: 5px;
+  cursor: pointer;
+}
+.buttonRandom:hover{
+  transform: scale(1.1);
+  color: black;
+  font-family:fantasy;
+  text-shadow: 2px 2px white,
+               -2px -2px white,
+               -2px 2px white,
+               2px -2px white;
+  box-shadow:   5px 5px 10px rgb(81, 255, 0);
+  background-color: rgba(255, 255, 255, 0.24);
+}
+
+
+
+@keyframes animationCookieL {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(225px);
+  }  
+}
+@keyframes animationCookieR{
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-225px);
+  }  
+}
+
+@keyframes animationText {
+  0%, 100% {
+    transform: scaleX(100%)
+
+  }
+  50% {
+    transform: scaleX(0%)
+  }
+  
+}
+
+
+
+@media (max-width: 550px){
+  .app h1{
+     font-size: 50px;
+     text-align: center;
+   }
+  .containerCoockie .text{
+    max-width: 300px;
+    min-width: 300px;
+    height: 110px;
+    position: relative;
+    top: 85px;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerCoockie.left,
+  .containerCoockie.rigth {
+    width: 50px;
+    height: 50px;
+  }
+
+  @keyframes animationCookieL {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(150px);
+    }  
+  }
+  @keyframes animationCookieR{
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-150px);
+    }  
+  }
+}
