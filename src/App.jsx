@@ -4,15 +4,15 @@ import arrPhrases from './utils/pharases.json';
 import getRandom from './js/getRandom.js';
 import Pharase from'./components/Phrase.jsx';
 import BottonPhrase from './components/BottonPhrase.jsx';
-import arrBackgrounds from "./utils/backgrounds.json" 
+import arrBackgrounds from "./utils/assets/backgrounds.json" 
 
 function App() {
 
   const [phrase, setPharase] = useState(getRandom(arrPhrases));
-  const [fondo, setFondo] = useState(getRandom(arrBackgrounds));
+  const [img, setImg] = useState(getRandom(arrBackgrounds));
   
   const objStyles = {
-    backgroundImage: `url(../public/backgrounds/fondo${fondo}.jpg)`
+    backgroundImage: `url(../public/assets/backgrounds/fondo${img}.jpg)`
   };
   
   return (
@@ -20,7 +20,7 @@ function App() {
       <h1>Galletas de la suerte</h1>
       
       <Pharase phrase ={phrase}></Pharase>
-      <BottonPhrase setPharase = {setPharase} setFondo = {setFondo}
+      <BottonPhrase setPharase = {setPharase} setImg = {setImg}
       ></BottonPhrase>
      </div>
   )
