@@ -5,14 +5,13 @@ import getRandom from './js/getRandom.js';
 import Pharase from'./components/Phrase.jsx';
 import BottonPhrase from './components/BottonPhrase.jsx';
 import arrBackgrounds from "./utils/backgrounds.json" 
-
 function App() {
 
   const [phrase, setPharase] = useState(getRandom(arrPhrases));
   const [img, setImg] = useState(getRandom(arrBackgrounds));
   
   const objStyles = {
-    backgroundImage: `url(../public/assets/backgrounds/fondo${img}.jpg)`
+    backgroundImage: `url(../public/assets/fondo${img}.jpg)`
   };
   
   return (
