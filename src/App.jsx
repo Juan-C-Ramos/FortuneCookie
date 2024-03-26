@@ -4,7 +4,7 @@ import arrPhrases from './utils/pharases.json';
 import getRandom from './js/getRandom.js';
 import Pharase from'./components/Phrase.jsx';
 import BottonPhrase from './components/BottonPhrase.jsx';
-import arrBackgrounds from "./utils/assets/backgrounds.json" 
+import arrBackgrounds from "./utils/backgrounds.json" 
 
 function App() {
 

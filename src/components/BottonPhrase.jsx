@@ -1,6 +1,6 @@
 import arrPhrase from "../utils/pharases.json"
 import getRandom from "../js/getRandom.js"
-import arrBackgrounds from "../utils/assets/backgrounds.json"
+import arrBackgrounds from "../utils/backgrounds.json"
 
 const BottonPhrase = ({setPharase, setImg}) => {
 
