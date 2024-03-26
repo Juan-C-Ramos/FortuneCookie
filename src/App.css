@@ -188,3 +188,18 @@ body{
     }  
   }
 }
+
+
+
+.tittle1{
+  background-image: url("../public/assets/fondo1.jpg");
+}
+.tittle2{
+  background-image: url("../public/assets/fondo2.jpg");
+}
+.tittle3{
+  background-image: url("../public/assets/fondo3.jpg");
+}
+.tittle4{
+  background-image: url("../public/assets/fondo4.jpg");
+}

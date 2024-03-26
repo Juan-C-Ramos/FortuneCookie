@@ -9,18 +9,18 @@ function App() {
 
   const [phrase, setPharase] = useState(getRandom(arrPhrases));
   const [img, setImg] = useState(getRandom(arrBackgrounds));
+  const app = "app";
   
-  const objStyles = {
+ /* const objStyles = {
     backgroundImage: `url(../public/assets/fondo${img}.jpg)`
   };
-  
+  */
   return (
-    <div className='app' style={objStyles}>
+    <div className={img + " " + app} /*style={objStyles}*/>
       <h1>Galletas de la suerte</h1>
       
       <Pharase phrase ={phrase}></Pharase>
-      <BottonPhrase setPharase = {setPharase} setImg = {setImg}
-      ></BottonPhrase>
+      <BottonPhrase setPharase = {setPharase} setImg = {setImg} img = {img}></BottonPhrase>
      </div>
   )
 }
