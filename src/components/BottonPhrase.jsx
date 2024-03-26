@@ -1,10 +1,11 @@
 import arrPhrase from "../utils/pharases.json"
 import getRandom from "../js/getRandom.js"
+import arrBackgrounds from "../utils/backgrounds.json"
 
 const BottonPhrase = ({setPharase, setFondo}) => {
 
   const handleClick = () => {
-    setFondo(getRandom([1,2,3,4]));
+    setFondo(getRandom(arrBackgrounds));
     const leftCookie = document.getElementsByClassName("left");
     const rigthCookie = document.getElementsByClassName("rigth");
     const textAnimate = document.getElementsByClassName("text");

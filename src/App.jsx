@@ -4,11 +4,12 @@ import arrPhrases from './utils/pharases.json';
 import getRandom from './js/getRandom.js';
 import Pharase from'./components/Phrase.jsx';
 import BottonPhrase from './components/BottonPhrase.jsx';
+import arrBackgrounds from "./utils/backgrounds.json" 
 
 function App() {
 
   const [phrase, setPharase] = useState(getRandom(arrPhrases));
-  const [fondo, setFondo] = useState(getRandom([1,2,3,4]));
+  const [fondo, setFondo] = useState(getRandom(arrBackgrounds));
   
   const objStyles = {
     backgroundImage: `url(../public/backgrounds/fondo${fondo}.jpg)`
@@ -22,8 +23,6 @@ function App() {
       <BottonPhrase setPharase = {setPharase} setFondo = {setFondo}
       ></BottonPhrase>
      </div>
-    
-
   )
 }
 
