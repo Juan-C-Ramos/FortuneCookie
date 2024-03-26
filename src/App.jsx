@@ -11,7 +11,7 @@ function App() {
   const [img, setImg] = useState(getRandom(arrBackgrounds));
   
   const objStyles = {
-    backgroundImage: `url(../public/assets/fondo${img}.jpg)`
+    backgroundImage: `url("../public/assets/fondo${img}.jpg")`
   };
   
   return (
