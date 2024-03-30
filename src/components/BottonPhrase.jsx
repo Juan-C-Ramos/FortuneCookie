@@ -9,10 +9,7 @@ const BottonPhrase = ({setPharase, setImg, img}) => {
 
     appBgr[0].classList.toggle(img);
     setImg(getRandom(arrBackgrounds));
-    appBgr[0].classList.toggle(img);
-    
-    
-    
+    appBgr[0].classList.toggle(img);    
     
     const leftCookie = document.getElementsByClassName("left");
     const rigthCookie = document.getElementsByClassName("rigth");
@@ -25,14 +22,14 @@ const BottonPhrase = ({setPharase, setImg, img}) => {
     setTimeout(() => {
       setPharase(getRandom(arrPhrase));
       console.log("2.5 seg esperando")
-    }, 2500);
+    }, 1250);
 
     setTimeout(() => {
         leftCookie[0].classList.toggle("animationLeft");
         rigthCookie[0].classList.toggle("animationRight");
         textAnimate[0].classList.toggle("animationText");
         console.log("5 Segundo esperado")
-    }, 5000);
+    }, 2500);
   }
 
   return <button className="buttonRandom" onClick={handleClick}>

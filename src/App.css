@@ -6,12 +6,68 @@
   margin: 0;
   padding: 0;
 }
-
 body{
   background-color: black;
   color: aliceblue;
 }
+/*Clases del fondo*/
+.tittle1{
+  background-image: url("../public/assets/fondo1.jpg");
+}
+.tittle1 h1{
+  text-shadow: 5px 5px 10px rgb(3, 71, 7),
+               -5px -5px 10px rgb(3, 71, 7),
+               5px -5px 10px rgb(3, 71, 7),
+               -5px 5px 10px rgb(3, 71, 7);
+}
+
+
+
+.tittle2{
+  background-image: url("../public/assets/fondo2.jpg");
+}
+.tittle2 h1{
+  text-shadow: 5px 5px 10px red,
+               -5px -5px 10px red,
+               5px -5px 10px red,
+               -5px 5px 10px red;
+}
+
+
+
+.tittle3{
+  background-image: url("../public/assets/fondo3.jpg");
+}
+.tittle3 h1{
+  text-shadow: 5px 5px 10px rgb(107, 105, 0),
+               -5px -5px 10px rgb(107, 64, 0),
+               5px -5px 10px rgb(107, 64, 0),
+               -5px 5px 10px rgb(107, 64, 0);
+}
+
+
+
+.tittle4{
+  background-image: url("../public/assets/fondo4.jpg");
+}
+.tittle4 h1{
+  text-shadow: 5px 5px 10px rgb(3, 1, 116),
+               -5px -5px 10px rgb(3, 1, 116),
+               5px -5px 10px rgb(3, 1, 116),
+               -5px 5px 10px rgb(3, 1, 116);
+}
+
+
 /* app*/
+.app h1{
+  font-size: 40px;
+}
+.app p{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 550px;
+  text-align: center;
+}
 .app{
   display: flex;
   flex-direction: column;
@@ -26,26 +82,20 @@ body{
   overflow: hidden;
 }
 
-.app h1{
-  font-size: 40px;
-  text-shadow: 5px 5px 10px red,
-               -5px -5px 10px red,
-               5px -5px 10px red,
-               -5px 5px 10px red;
-}
-.app p{
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  max-width: 550px;
-  text-align: center;
-}
 .author{
   font-size: 18px !important;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
   text-align: end !important;
 }
 .text{
-  background-color: rgb(255, 223, 233);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: url("../public/assets/textBg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: black;
   padding: 10px 30px;
   max-width: 450px;
@@ -56,12 +106,12 @@ body{
   top: 80px;
   z-index: 1;
 }
-
+/*animacion de cierre y apertura del texto */
 .animationText{
   animation-name: animationText;
-  animation-duration: 5s;
+  animation-duration: 2.5s;
 }
-
+/*galletas de los laterales*/
 .containerCoockie{
   display: flex;
   flex-direction:row;
@@ -83,16 +133,16 @@ body{
 }
 .animationLeft{
   animation-name: animationCookieL;
-  animation-duration: 5s;
+  animation-duration: 2.5s;
 }
 .rigth{
   background-image: url("../public/assets/cookie-rigth.png");
 }
 .animationRight{
   animation-name: animationCookieR;
-  animation-duration: 5s;
+  animation-duration: 2.5s;
 }
-
+/*Boton que cambia frase y fondo*/
 .app button{
   font-size: 18px;
   background-color: transparent;
@@ -119,7 +169,7 @@ body{
   background-color: rgba(255, 255, 255, 0.24);
 }
 
-
+/*animaciones de galletas y texto */
 
 @keyframes animationCookieL {
   0%, 100% {
@@ -149,34 +199,44 @@ body{
   
 }
 
-
+/*media queries para mobile*/
 
 @media (max-width: 550px){
   .app h1{
      font-size: 50px;
      text-align: center;
    }
-  .containerCoockie .text{
-    max-width: 300px;
-    min-width: 300px;
-    height: 110px;
+  .text{
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    min-width: 250px;
+    height: 100px;
     position: relative;
-    top: 85px;
+    top: 55px;
     justify-content: center;
     align-items: center;
   }
-  .containerCoockie.left,
-  .containerCoockie.rigth {
-    width: 50px;
-    height: 50px;
+  .author{
+    font-size: 10px !important;
+  }
+  .phrase{
+    font-size: 15px !important; 
   }
 
+
+  .containerCoockie .left,
+  .containerCoockie .rigth {
+    width: 150px;
+    height: 150px;
+  }
+/*animaciones para la version mobile*/
   @keyframes animationCookieL {
     0%, 100% {
       transform: translateX(0);
     }
     50% {
-      transform: translateX(150px);
+      transform: translateX(125px);
     }  
   }
   @keyframes animationCookieR{
@@ -184,22 +244,10 @@ body{
       transform: translateX(0);
     }
     50% {
-      transform: translateX(-150px);
+      transform: translateX(-125px);
     }  
   }
 }
 
 
 
-.tittle1{
-  background-image: url("../public/assets/fondo1.jpg");
-}
-.tittle2{
-  background-image: url("../public/assets/fondo2.jpg");
-}
-.tittle3{
-  background-image: url("../public/assets/fondo3.jpg");
-}
-.tittle4{
-  background-image: url("../public/assets/fondo4.jpg");
-}
